@@ -1,0 +1,73 @@
+CREATE DATABASE  IF NOT EXISTS `vymsa2020` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `vymsa2020`;
+-- MySQL dump 10.13  Distrib 5.5.16, for Win32 (x86)
+--
+-- Host: 192.168.1.210    Database: vymsa2020
+-- ------------------------------------------------------
+-- Server version	5.5.62-0ubuntu0.14.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `stotrx`
+--
+
+DROP TABLE IF EXISTS `stotrx`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `stotrx` (
+  `trxcod` char(2) NOT NULL,
+  `trxnom` char(40) NOT NULL,
+  `trxnum` char(8) NOT NULL,
+  `trxtipo` char(1) NOT NULL,
+  `trxlote` int(1) DEFAULT '0',
+  `trxcan` int(1) DEFAULT '0',
+  `trxcost` int(1) DEFAULT '0',
+  `trxpre` int(1) DEFAULT '0',
+  `trxdcto` int(1) DEFAULT '0',
+  `trxcos` int(1) DEFAULT '0',
+  `trxacu_v` int(1) DEFAULT '0',
+  `trxtran` int(1) DEFAULT '0',
+  `trxcta_c` int(1) DEFAULT '0',
+  `trxfor` int(2) DEFAULT '0',
+  `trxact` int(1) DEFAULT '0',
+  `trxcdc` int(1) DEFAULT '0',
+  `trxdirec` int(1) DEFAULT '0',
+  `trxcompra` int(1) DEFAULT '0',
+  `trximport` int(1) DEFAULT '0',
+  `trxgasto` int(1) DEFAULT '0',
+  `trxcosto` int(1) DEFAULT '0',
+  `trxubic` int(1) DEFAULT '0',
+  PRIMARY KEY (`trxcod`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `stotrx`
+--
+
+LOCK TABLES `stotrx` WRITE;
+/*!40000 ALTER TABLE `stotrx` DISABLE KEYS */;
+INSERT INTO `stotrx` VALUES ('C1','OTRAS COMPRAS','00000000','I',0,1,2,1,0,1,1,0,0,1,0,0,0,1,0,0,0,0),('EB','EGRESO DE BODEGA','00000000','E',0,1,1,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0),('EG','EGRESOS DE BODEGA','00000000','E',0,1,2,1,0,1,0,0,0,1,0,0,0,0,0,0,1,0),('EN','ENTREGA DE PRODUCTOS','00000000','E',0,1,1,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0),('I1','SALDOS INICIALES','00000000','I',0,1,2,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0),('I2','COMPRAS IMPORTACIONES','00000000','I',0,1,2,1,0,1,0,0,0,8,0,0,0,0,1,0,0,0),('I3','DEVOLUCION DE VENTAS','00000000','I',0,1,2,1,1,1,1,0,0,3,0,0,0,0,0,0,0,0),('I4','INGRESO AJUSTE CANTIDAD','00000000','I',0,1,2,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0),('I5','INGRESO AJUSTE COSTO','00000000','I',0,1,2,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0),('I6','INGRESO TRANSFERENCIA','00000000','I',0,1,2,1,0,1,1,0,0,2,0,0,0,0,0,0,0,0),('I7','REINGRESO','00000000','I',0,1,2,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0),('I8','INGRESO POR CONSIGNACIONES','00000000','I',0,1,1,1,0,1,1,0,0,2,0,0,0,0,0,0,0,0),('I9','COMPRAS LOCALES','00000000','I',0,1,2,0,1,1,0,0,0,1,0,0,0,1,0,0,0,0),('IB','INGRESO A BODEGA','00000000','I',0,1,2,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0),('IN','INGRESO A BODEGA','00000000','I',0,1,2,1,0,1,1,0,0,1,0,0,0,0,0,0,1,0),('S1','DEVOLUCIONES EN COMPRAS','00000000','E',0,1,2,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0),('S2','FACTURAS','00000000','E',0,1,2,1,0,1,1,0,0,1,0,0,0,0,0,0,0,0),('S3','EGRESO AJUSTE CANTIDAD','00000000','E',0,1,2,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0),('S4','EGRESO AJUSTE COSTO','00000000','E',0,1,2,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0),('S5','EGRESO POR CONSIGNACION','00000000','E',0,1,1,1,1,1,1,1,0,2,0,0,0,0,0,0,0,0),('S6','REQUISICIONES','00000000','E',0,1,2,1,0,1,0,0,0,1,0,0,0,1,0,0,0,0),('S7','EGRESO POR TRANSFERENCIA','00000000','E',0,1,2,1,1,1,1,1,0,1,0,0,0,0,0,0,1,0),('S8','NOTAS DE VENTA','00000000','E',0,1,2,1,1,1,0,0,0,2,0,0,0,0,0,0,0,0),('S9','SOLO PEDIDOS','00000000','I',0,1,2,1,1,1,1,0,0,2,0,0,0,0,0,0,0,0);
+/*!40000 ALTER TABLE `stotrx` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-10-30 17:40:43
